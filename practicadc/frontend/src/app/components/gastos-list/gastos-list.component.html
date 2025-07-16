@@ -1,0 +1,16 @@
+<div class="gastos-list">
+  <h2>Lista de Gastos</h2>
+  <ul>
+    <li *ngFor="let gasto of gastos" class="gasto-item">
+      <div>
+        <span class="item">{{ gasto.item }}</span>
+        <span class="category">{{ gasto.category }}</span>
+        <span class="date">{{ gasto.expense_date | date }}</span>
+      </div>
+      <div class="right-side">
+        <span class="amount">$ {{ gasto.amount | number: '1.2-2' }}</span>
+        <button (click)="eliminarGasto(gasto.id!)" class="delete-button">Eliminar</button>
+      </div>
+    </li>
+  </ul>
+</div>

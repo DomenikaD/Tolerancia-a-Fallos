@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+<app-gastos-form (gastoAgregado)="agregarGasto($event)"></app-gastos-form>
+
+<app-gastos-list [gastos]="gastos"
+(eliminar)="eliminarGasto($event)">
+</app-gastos-list> 
+
+<!-- <div class="gastos-list">
+  <h2>Lista del Reporte de Gastos (Almacenamiento compartido)</h2>
+
+  <div style="text-align: center; margin-bottom: 1rem;">
+    <button (click)="guardarRespaldo()">Guardar Respaldo</button>
+    <button (click)="verRespaldo()">Ver Respaldo</button>
+  </div>
+
+  <ul>
+    <li *ngFor="let gasto of gastos">
+      <div>
+        <span class="item">{{ gasto.item }}</span>
+        <span class="category">{{ gasto.category }}</span>
+        <span class="date">{{ gasto.expense_date | date }}</span>
+      </div>
+      <span class="amount">$ {{ gasto.amount | number: '1.2-2' }}</span>
+    </li>
+  </ul>
+
+  <h3 *ngIf="respaldo.length">Respaldo desde almacenamiento compartido</h3>
+  <ul *ngIf="respaldo.length">
+    <li *ngFor="let gasto of respaldo">
+      <div>
+        <span class="item">{{ gasto.item }}</span>
+        <span class="category">{{ gasto.category }}</span>
+        <span class="date">{{ gasto.expense_date | date }}</span>
+      </div>
+      <span class="amount">$ {{ gasto.amount | number: '1.2-2' }}</span>
+    </li>
+  </ul>
+</div> -->
+
+
+<app-footer></app-footer>

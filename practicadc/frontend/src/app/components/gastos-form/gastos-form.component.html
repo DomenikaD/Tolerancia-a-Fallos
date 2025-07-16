@@ -1,0 +1,24 @@
+<form [formGroup]="gastoForm" (ngSubmit)="onSubmit()" class="gasto-form">
+  <h2> Nuevo Gasto </h2>
+  <label>
+    Item:
+    <input type="text" formControlName="item" />
+  </label>
+
+  <label>
+    Amount:
+    <input type="number" formControlName="amount" step="0.01" />
+  </label>
+
+  <label>
+    Category:
+    <input type="text" formControlName="category" />
+  </label>
+
+  <label>
+    Date:
+    <input type="date" formControlName="expense_date" />
+  </label>
+
+  <button type="submit" [disabled]="!gastoForm.valid">Add</button>
+</form>
